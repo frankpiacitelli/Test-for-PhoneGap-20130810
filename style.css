@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+
+
+
+/* Portrait Layout: 540px and below. */
+
+#header {
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	position: fixed;
+	top: 0em;
+	height: 10%;
+	background: orange;
+	padding: 5%;
+}
+
+#footer {
+	clear: both;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	position: fixed;
+	bottom: 0em;
+	background: yellow;
+	padding: 5%;
+	height: 10%;
+}
+
+#content {
+	margin-left: auto;
+	margin-right: auto;
+	width: 87.36%;
+	padding-left: 1.82%;
+	padding-right: 1.82%;
+	position: fixed;
+	top: 50%;
+}
+
+.contentBlock {
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+
+/* Landscape Layout: 541px up. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 541px) {
+
+#header {
+	background: blue;
+}
+
+#footer {
+	background: green;
+}
+
+#content {
+	width: 90.675%;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+}
+
+.contentBlock {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+
